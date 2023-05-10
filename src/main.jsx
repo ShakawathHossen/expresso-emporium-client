@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Banner/>,
-        loader:()=>fetch('/jobs.json')
+        loader:()=>fetch('http://localhost:5000/coffee')
         
       },
       {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const PopularProduct = () => {
+const PopularProduct = ({coffee}) => {
     return (
         <div>
-            Popular Product
+            {coffee.name}
         </div>
     );
 };
