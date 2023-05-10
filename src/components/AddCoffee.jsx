@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
@@ -42,7 +43,9 @@ const AddCoffee = () => {
     return (
         <div>
             <div className='container mx-auto '>
-                <button>Back to home</button>
+            <Link to={'/'}>
+          <button className='font-[Rancho] pb-8'>Back to home</button>
+          </Link>
 
                <div className='bg-[#F4F3F0] px-16 py-12'>
                <div className='text-center px-16 py-8 '>

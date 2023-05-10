@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const UpdateCoffee = () => {
@@ -54,7 +54,9 @@ const UpdateCoffee = () => {
     return (
         <div>
         <div className='container mx-auto '>
-            <button>Back to home</button>
+        <Link to={'/'}>
+          <button className='font-[Rancho] pb-8'>Back to home</button>
+          </Link>
 
            <div className='bg-[#F4F3F0] px-16 py-12'>
            <div className='text-center px-16 py-8 '>

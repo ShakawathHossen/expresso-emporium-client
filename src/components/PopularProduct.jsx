@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const PopularProduct = ({ coffee }) => {
+const PopularProduct = ({ coffee,setCoffees,coffees }) => {
     const { _id, photo, name, chef, category } = coffee;
 
     const hanleDelete = _id => {
@@ -31,6 +31,8 @@ const PopularProduct = ({ coffee }) => {
                                 'Your Coffee has been deleted.',
                                 'success'
                               )
+                              const remaining = coffees.filter(c=>c._id !== _id)
+                              setCoffees(remaining);
                         }
                     });
 
@@ -47,23 +49,25 @@ const PopularProduct = ({ coffee }) => {
         <div>
             <div >
                 <div className="bg-[#F4F3F0] p-4 shadow-md rounded-lg ">
-                    <div className="grid grid-cols-3 gap-4 justify-items-end">
-                        <div className="col-span-1">
+                    <div className="grid grid-cols-6 justify-items-center">
+                        <div className="col-span-2">
                             <img
                                 src={photo}
                                 alt="Card Image"
                                 className="w-full h-auto rounded"
                             />
                         </div>
-                        <div className="col-span-1 flex flex-col items-center justify-center">
-                            <p className="text-lg font-semibold">Name: {name}</p>
-                            <p className="text-lg font-semibold">Chef: {chef}</p>
-                            <p className="text-lg font-semibold">Category: {category}</p>
+                        <div className="col-span-3 flex flex-col items-center md:items-start justify-center">
+                            <p className="text-sm font-semibold">Name: {name}</p>
+                            <p className="text-sm font-semibold">Chef: {chef}</p>
+                            <p className="text-sm font-semibold">Category: {category}</p>
                         </div>
                         <div className="col-span-1 flex flex-col justify-center">
+                            <Link to={`viewCoffee/${_id}`}>
                             <button className="py-2 px-4 mb-2">
                                 <img src="https://i.ibb.co/n1qkQJP/view-Button.png" alt="" />
                             </button>
+                            </Link>
                             <Link to={`updateCoffee/${_id}`}>
                             <button className="py-2 px-4 mb-2">
                                 <img src="https://i.ibb.co/G08dvDK/edit-button.png" alt="" />
