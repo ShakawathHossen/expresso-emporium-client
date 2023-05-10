@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const PopularProduct = ({ coffee }) => {
@@ -63,9 +64,11 @@ const PopularProduct = ({ coffee }) => {
                             <button className="py-2 px-4 mb-2">
                                 <img src="https://i.ibb.co/n1qkQJP/view-Button.png" alt="" />
                             </button>
+                            <Link to={`updateCoffee/${_id}`}>
                             <button className="py-2 px-4 mb-2">
                                 <img src="https://i.ibb.co/G08dvDK/edit-button.png" alt="" />
                             </button>
+                            </Link>
                             <button onClick={() => hanleDelete(_id)} className="py-2 px-4">
                                 <img src="https://i.ibb.co/b1ngMDt/delete-button.png" alt="" />
                             </button>
