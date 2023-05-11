@@ -20,7 +20,7 @@ const Banner = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                         <h1 className="text-4xl text-white font-bold mb-4 font-[Rancho]">Would you like a Cup of Delicious Coffee?</h1>
-                        <p className="text-white mb-6 w-1/2 mx-auto text-sm">It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
+                        <p className="text-white mb-6 w-2/3 mx-auto text-sm">It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
                         <button className='font-[Rancho] bg-[#E2B477] px-3 py-1  text-xl border  border-[#331A15]'>Learn More</button>
                     </div>
                 </div>
